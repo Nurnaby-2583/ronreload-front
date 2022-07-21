@@ -1,0 +1,42 @@
+name: ronreload fronend deployment
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setting up nodejs for building codebase
+        uses: actions/checkout@v3
+        with:
+          host: ${{ secrets.RONRELOAD_FRONT_HOST }}
+          username: ${{ secrets.RONRELOAD_FRONT_USER }}
+          port: ${{ secrets.RONRELOAD_FRONT_PORT }}
+          password: ${{ secrets.RONRELOAD_FRONT_PASS }}
+          source: "html"
+
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm install -g yarn
+      - run: yarn insatll --frozen-lockfile
+      - run: yarn run build
+      - run: mv out html
+
+      - name: Copy files to deployment server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.RONRELOAD_FRONT_HOST }}
+          username: ${{ secrets.RONRELOAD_FRONT_USER }}
+          port: ${{ secrets.RONRELOAD_FRONT_PORT }}
+          password: ${{ secrets.RONRELOAD_FRONT_PASS }}
+          source: "html"
+          target: /var/www/frontend
+          script: |
+           cd /var/www/frontend
+           pm2 start npm --name "next" -- start

@@ -1,0 +1,678 @@
+
+/* BASIC */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 80vh;
+    background-color: #F5F7F6;
+  }
+  
+  a {
+    color: #202020;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  a:hover {
+    color: #000;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display:inline-block;
+    margin: 40px 8px 10px 8px; 
+    color: #cccccc;
+  }
+
+  .titles h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    text-transform: capitalize; 
+    color: #2C2C2C;
+  }
+  .signUpTitles h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.005em;
+    text-transform: capitalize; 
+    color: #2C2C2C;
+  }
+  .simpleTitle p{
+    font-size: 27px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+  }
+
+
+  /* global css */
+
+  .mb16{
+    margin-bottom: 16px !important;
+  }
+  .fs14{
+    font-size: 14px;
+  }
+  .mt20{
+    margin-top: 20px;
+  }
+  .p20{
+    padding: 20px;
+  }
+  .floatRight{
+    float: right;
+  }
+  .marginAuto{
+    margin: 0 auto;
+  }
+  .displayNone{
+    display: none !important;
+  }
+  /* end global css */
+
+  /* Nav bar  */
+  .navbar{
+      background-color: #fff;
+      height: 120px;
+      font-family: 'Source Sans Pro', sans-serif;
+  }
+  .nav-link{
+    font-weight: 700; 
+    color: #000;
+  }
+  .nav a:hover {
+    color: #000;
+  }
+  .signup{
+    width: 139px;
+    /* height: 44px; */
+    padding: 6px 23px;
+    margin-left: 35px;
+    border-color: #000;
+    font-weight: 700; 
+    color: #fff;
+    background-color: #000;
+  }
+  .signup:hover{
+    background-color: #000;
+  }
+  .signup:focus {
+    box-shadow: none !important;
+    background-color: #000 !important; 
+  }
+
+  /* forgot password */
+  .forget-pass a{
+    font-weight: 600;
+  }
+  .rememberText{
+    font-weight: 600;
+    display: inline !important;
+  }
+  .rememberCheckbox{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    accent-color: #000;
+  }
+  
+  .nicknameCheckbox{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    accent-color: #000;
+  }
+  .nicknameText{
+    display: inline;
+  }
+  
+  /* STRUCTURE */
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #formContent {
+    border-radius: 3px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 475px;
+    position: relative;
+    padding: 0px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.097);
+    padding: 40px;
+  }
+
+  #formContent700 {
+    border-radius: 3px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    padding: 0px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.097);
+    padding: 40px;
+  }
+  
+  #formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  #CardContent{
+    border-radius: 5px;
+    background: #fff;
+    width: 90%;
+    max-width: 475px;
+    position: relative;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.127);
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.108);
+    padding: 40px;
+    margin: 30px;
+  }
+  .community-img img{
+    width: 50px;
+  }
+  .community-ml{
+    margin-left: -15px;
+  } 
+  .communityNumber{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  
+  
+  /* TABS */
+  
+  h2.inactive {
+    color: #cccccc;
+  }
+  
+  h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+  }
+
+  
+  
+  /* FORM TYPOGRAPHY*/
+  
+  input[type=button], input[type=submit], input[type=reset]  {
+    /* background-color: transparent; */
+    background-color: #000;
+    border: 2px solid #000000;
+    color: #fff;
+    padding: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 12px 0px 20px 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    border-radius: 100px;
+  }
+  
+  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+    /* background-color: #1d1d1d;
+    color: #fff;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(12, 12, 12, 0.4);
+    box-shadow: 0 10px 30px 0 rgba(13, 13, 13, 0.4); */
+  }
+  
+  input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+    /* -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95); */
+  }
+  
+  input[type=text] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    border-radius: 100px;
+  }
+
+  select{
+    background-color: #f9f9f9;
+    border: none;
+    color: #0d0d0d;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 48px;
+    width: 85%;
+    border: 1px solid #DBD9D9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    width: 100%;
+    border-radius: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../public/assets/br_down.png") no-repeat 95% #f9f9f9;
+
+  }
+
+  select::-ms-expand { display: none; }
+
+  
+  input[type=text]:focus {
+    background-color: #fff;
+    border: 2px solid #2C2C2C;
+  }
+
+  input[type=email] {
+    background-color: #f9f9f9;
+    border: none;
+    color: #0d0d0d;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 48px;
+    width: 85%;
+    border: 1px solid #DBD9D9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    width: 100%;
+    border-radius: 100px;
+  }
+  
+  input[type=email]:focus {
+    background-color: #fff;
+    border: 2px solid #2C2C2C;
+  }
+
+  input[type=password] {
+    background-color: #f9f9f9;
+    border: none;
+    color: #0d0d0d;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px 0 0 0;
+    height: 48px;
+    width: 85%;
+    border: 1px solid #DBD9D9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    border-radius: 100px;
+  }
+  
+  input[type=password]:focus {
+    background-color: #fff;
+    border: 2px solid #2C2C2C;
+  }
+
+.checkbox_section{
+  padding:  15px 0;
+}
+
+  .checkbox_group {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    padding:  6px 0;
+    letter-spacing: 0.005em;
+    color: #000000;
+    position: relative;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #000000;
+  }
+.checkbox_group{
+    display: flex;
+    justify-content: space-between;
+}
+.create-ac{
+    padding: 20px 0;
+}
+.line{
+    width: 90%;
+    margin: 0 auto 16px;
+    border-top: 2px solid #ebebeb;
+}
+
+/* Forgot password */
+
+.back-to-login{
+  padding: 18px 0;
+}
+#forgetmail{
+  padding: 13px;
+  margin: 20px 0;
+}
+.openMail{
+  width: 100%;
+}
+.btn-openMail{
+  background-color: #333;
+  border: 2px solid #000000;
+  color: #fff !important;
+  padding: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 12px 0px 20px 0;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  border-radius: 100px;
+}
+.btn-openMail:hover{
+  /* background-color: #1d1d1d;
+  border: 2px solid #1d1d1d;
+  color: #fff;-webkit-box-shadow: 0 10px 30px 0 rgba(12, 12, 12, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(13, 13, 13, 0.4); */
+  background-color: #333;
+  border-color: #333;
+}
+.resendMail{
+  padding: 0 0 10px 0;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  padding: 0 0 5px 0;
+  position: relative;
+}
+small{
+  visibility: hidden;
+}
+.form-control.error small{
+  visibility: visible;
+}
+
+/* Reset Password */
+.successLogin{
+  width: 100%;
+}
+
+
+
+
+  /* ANIMATIONS */
+  
+  /* Simple CSS3 Fade-in-down Animation */
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fadeIn {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+  }
+  
+  .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  /* .fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  } */
+  
+  .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  .underline{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #121212;
+    content: "";
+    transition: width 0.2s;
+  }
+  
+  .underlineHover:hover {
+    color: #0d0d0d;
+  }
+  
+  .underlineHover:hover:after{
+    width: 100%;
+  }
+  
+  
+  
+  /* OTHERS */
+  
+  *:focus {
+      outline: none;
+  } 
+  
+  #icon {
+    width:60%;
+  }
+  .social-login{
+    padding-top: 8px;
+  }
+  .social_icons {
+    padding: 0px 8px;
+  }
+  .backLogin{
+    color: #2c2c2c !important;
+  }
+  
+
+
+ /* profileinfo page */
+ .radioOptionIndividual{
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  margin-right: 2%;
+ }
+
+ .radioOptionCompany{
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  margin-bottom: 16px;
+ }
+ .radioOptionMale{
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  margin-bottom: 16px;
+ }
+ .radioOptionFemale{
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  margin-bottom: 16px;
+ }
+ .radioOptionNonBinary{
+  width: 100%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+  margin-bottom: 16px;
+ }
+ .rightSideImg{
+  background: url("../public/assets/register-img.png") no-repeat 95% #f9f9f9;
+  background-size: cover;
+  height: 876px;
+  width: 100%;
+ }
+
+ .rightSideImg p{
+  margin-top: 558px;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 12%;
+ }
+
+.categoryCheckbox label {
+  float:left;
+  width:100%;
+}
+
+.categoryCheckbox label span {
+  text-align:center;
+  padding:15px 0px;
+  display:block;
+  background-color: #f9f9f9;
+  border-radius: 100px;
+}
+
+.categoryCheckbox label input {
+  position:absolute;
+  top:-20px;
+  visibility: hidden;
+}
+
+.categoryCheckbox input:checked + span {
+  background-color:#333;
+  color:#fff;
+}
